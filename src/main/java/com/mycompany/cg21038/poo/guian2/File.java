@@ -25,7 +25,35 @@ public class File {
 
     }
 
-   
+    public void consultaInfo() {
+        System.out.println("No de consulta: " + this.numeroConsulta);
+        System.out.println("Diagnostico: " + this.diagnostico);
+        System.out.println("Nombre de veterinario: " + this.nombreVeterinario);
+    }
+
+    public void dateInfo() {
+        System.out.println("Fecha de consulta: " + this.fechaConsulta);
+
+    }
+
+    /*
+    Un perro con una edad menor a 2 años tiene valor de cita de $10.00, 
+    un perro mayor a 2 años, pero menor a 7 años el valor de cita es de $25.00 
+    un perro mayor a 7 años el valor de cita es de $35.00";     
+     */
+    public double valorConsulta(int edad) {
+        double valorCita = 0.00;
+        if (edad < 2) {
+            valorCita = 10.00;
+        }
+        if (edad > 2 && edad < 7) {
+            valorCita = 25.00;
+        }
+        if (edad > 7) {
+            valorCita = 35.00;
+        }
+        return valorCita;
+    }
 
     //setters and getters
     public int getNumeroConsulta() {

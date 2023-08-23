@@ -22,7 +22,12 @@ public class Pet {
         this.peso = peso;
         this.tipoMascota = tipoMascota;
     }
-
+    public void PetInfo(){
+        System.out.println("Altura de mascota: "+ this.altura + "m");
+        System.out.println("Edad de mascota: "+ this.edad);
+        System.out.println("Peso de mascota: "+ this.peso);
+        System.out.println("Tipo de mascota:"+ this.tipoMascota);
+    }
     
     //getters y setters
     public String getTipoMascota() {
